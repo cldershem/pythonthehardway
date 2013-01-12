@@ -1,0 +1,35 @@
+What can I do for you today?
+	taco?
+		how many?
+		what kind of tortilla?
+			corn
+			flour
+		what kind of protein?
+			beef
+			pork
+			fish
+			shrimp
+			bean
+		salsa?
+			pica de gallo
+			roja
+			verde
+			none
+				wuss
+		chips?
+			yes
+				salsa?
+			no
+	You ordered qty protein tacos with tortilla tortillas and salsa salsa.  You ordered chips chips.  Would you like a drink with that?
+	
+	drink?
+		horchata?
+		limon?
+		jarritos?
+	none?
+		bathroom?
+			Down the hall on the left.
+		none?
+			"Quit wasting my time."  Slaps you.
+
+	
