@@ -47,15 +47,15 @@ class Freezer(Scene):
 
 				if guesses == 3:
 					print "HINT!"
-					print code[0]
+					print "%s**" % code[0]
 
 				elif guesses == 6:
 					print "HINT!"
-					print code[0:2]
+					print "%s*" % code[0:2]
 
 				elif guesses == 9:
 					print "HINT!"
-					print code[0:3]
+					print "%s" % code[0:3]
 
 				guess = raw_input("keycode: (hint ***)> ")
 
@@ -178,15 +178,15 @@ class ComputerRoom(Scene):
 
 			if guesses == 3:
 				print "HINT!"
-				print password[0]
+				print "%s***" % password[0]
 
 			elif guesses == 6:
 				print "HINT!"
-				print password[0:2]
+				print "%s**" % password[0:2]
 
 			elif guesses == 9:
 				print "HINT!"
-				print password[0:3]
+				print "%s*" % password[0:3]
 
 			guess = raw_input("password: (hint ****)")
 
