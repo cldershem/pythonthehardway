@@ -1,30 +1,6 @@
 from sys import exit
 from random import randint
 
-#* Map
-#  - next_scene
-#  - opening_scene
-#* Engine
-#  - play
-#* Scene
-#  - enter
-#  * Death
-#  * Central Corridor
-#  * Laser Weapon Armory
-#	-get bomb
-#  *Ship
-#  *Planet
-#  * The Bridge
-#	-set bomb
-#  * Escape Pod
-#* Characters
-#  -Player
-#  -Alien/Gothom
-#* Objects
-#  -bomb
-#  -keypad
-
-
 class Scene(object):
 
 	def enter(self):
@@ -71,6 +47,7 @@ class CentralCorridor(Scene):
 		print "flowing around his hate filled body.  He's blocking the door to the"
 		print "Armory and about to pull a weapon to blast you."
 
+		print "Say 'tell a joke'"
 		action = raw_input("> ")
 
 		if action == "Shoot!":
@@ -117,12 +94,16 @@ class LaserWeaponArmory(Scene):
 		code = "%d%d%d" % (randint(1,9), randint(1,9), randint(1,9))
 		print code
 		guess = raw_input("[keypad]> ")
+		if not guess.isdigit():
+			print "You must type an integer!"
 		guesses = 0
 
 		while guess != code and guesses < 9:
 			print "BZZZZEDDD!"
 			guesses += 1
 			guess = raw_input("[keypad]> ")
+			if not guess.isdigit():
+				print "You must type an integer!"
 
 		if guess == code:
 			print "The container clicks open and the seal breaks, letting gas out."
@@ -145,7 +126,8 @@ class TheBridge(Scene):
 		print "clown costume than the last.  They haven't pulled their"
 		print "weapons out yet, as they see the active bomb under your"
 		print "arm and don't want to set it off."
-
+		
+		print "Say 'slowly place the bomb'"
 		action = raw_input("> ")
 
 		if action == "throw the bomb":
@@ -201,7 +183,7 @@ class EscapePod(Scene):
 			print "time.  You won!"
 
 			return 'finished'
-
+			exit(0)
 
 class Map(object):
 

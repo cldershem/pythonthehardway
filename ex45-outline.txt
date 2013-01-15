@@ -1,0 +1,23 @@
+#Guy wakes up in a building, doesn't know where he is, but that he must get out.
+#There are 5 rooms between him and the exit.
+#He must do a task in each room to get out.
+
+#Freezer
+#	print room description
+#	-Keypad
+#	exit room
+#hallway
+#	-L or R
+#	-L is Closet
+#	-R is Office
+#Closet
+#	-go inside and stuck
+#	-check door handle - its unlocked
+#Office
+#	-McGyver lock
+#Computer Room
+#	-haxor the mainframe
+#Bar
+#	-unscramble code
+#Exit to street
+#	-You win or get hit by a bus
