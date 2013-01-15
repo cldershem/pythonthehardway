@@ -1,5 +1,1 @@
-This is a readme file for a repo I just made.
-
-I don't really know how this works.
-
-yup.
+These files are not organized very well, I apologize to you for that.
