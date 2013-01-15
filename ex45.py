@@ -36,8 +36,9 @@ class Freezer(Scene):
 
 		if choice == "1":
 			code = "%d%d%d" % (randint(1,9),randint(1,9),randint(1,9),)
-			print code #take this out of live game
-			guess = raw_input("[keypad]> ")
+			print "You must guess the keycode."
+			#print code #take this out of live game
+			guess = raw_input("keycode: (hint ***)> ")
 			guesses = 0
 
 			while guess != code and guesses < 9:
@@ -56,7 +57,7 @@ class Freezer(Scene):
 					print "HINT!"
 					print code[0:3]
 
-				guess = raw_input("[keypad]> ")
+				guess = raw_input("keycode: (hint ***)> ")
 
 			if guess == code:
 				print "The door seal breaks, letting in more light."
@@ -187,7 +188,7 @@ class ComputerRoom(Scene):
 				print "HINT!"
 				print password[0:3]
 
-			guess = raw_input("password: ****")
+			guess = raw_input("password: (hint ****)")
 
 		if guess == password:
 			print "You realize that their IT guy is either 13 or an asshole."
