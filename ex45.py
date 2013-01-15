@@ -38,16 +38,25 @@ class Freezer(Scene):
 			code = "%d%d%d" % (randint(1,9),randint(1,9),randint(1,9),)
 			print code #take this out of live game
 			guess = raw_input("[keypad]> ")
-#			if not guess.isdigit():
-#				print "You must type an integer!"
 			guesses = 0
 
 			while guess != code and guesses < 9:
 				print "You are WRONG! %d guesses left." % (9 - guesses)
 				guesses += 1
+
+				if guesses == 3:
+					print "HINT!"
+					print code[0]
+
+				elif guesses == 6:
+					print "HINT!"
+					print code[0:2]
+
+				elif guesses == 9:
+					print "HINT!"
+					print code[0:3]
+
 				guess = raw_input("[keypad]> ")
-#				if not guess.isdigit():
-#					print "You must type an integer!"
 
 			if guess == code:
 				print "The door seal breaks, letting in more light."
@@ -158,12 +167,26 @@ class ComputerRoom(Scene):
 		print "You see one open terminal and you sit down in front of it."
 		print "It is asking for the root password."
 		password = "1337"
-		guess = raw_input("password: **** >")
+		guess = raw_input("password: (hint ****)>")
+
 		guesses = 0
 
 		while guess != password and guesses < 9:
 			print "You are WRONG!  %d guesses left." % (9 - guesses)
 			guesses += 1
+
+			if guesses == 3:
+				print "HINT!"
+				print password[0]
+
+			elif guesses == 6:
+				print "HINT!"
+				print password[0:2]
+
+			elif guesses == 9:
+				print "HINT!"
+				print password[0:3]
+
 			guess = raw_input("password: ****")
 
 		if guess == password:
