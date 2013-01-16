@@ -136,6 +136,7 @@ def Chip_Order():
 	chip_salsa = raw_input("> ")
 	if chip_salsa == "none":
 		print "Wuss"
+		chip_salsa = "no"
 	elif chip_salsa not in Salsa_Choices:
 		Slap()
 	chip_order.append(chip_salsa)

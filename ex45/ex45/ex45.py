@@ -216,10 +216,10 @@ class Bar(Scene):
 		return shuffled_beer_list	
 
 	def enter(self):
-		print "You walk into the back of a bar.  After all of that you could "
-		print "really use a beer so you sit down on a barstool."
+		print "The door opens to the back of a bar.  After all of that you"
+		print "could really use a beer so you sit down on a barstool."
 		print "The bartender walks up."
-		print "I'll have an Alpha King."
+		print "\n\tYou: I'll have an Alpha King."
 		print "\n\tBartender: You have got some balls coming back in here."
 		print "\tI'll make you a deal, I'll serve you the beer if can "
 		print "\ttell me the best beer in this list."
@@ -242,7 +242,7 @@ class Bar(Scene):
 			print "..."
 			print "..."
 			print "6 Alpha Kings later..."
-			print "Bartender:  You frackin' asshat.  I must have been a fool"
+			print "\n\tBartender:  You frackin' asshat.  I must have been a fool"
 			print "\tto let you drink here again.  GET OUT!!!!"
 			return 'Street'
 
