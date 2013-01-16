@@ -4,7 +4,7 @@ class ParserError(Exception):
 class Sentence(object):
 
 	def __init__(self, subject, verb, object):
-		# remember we take ('noun', 'princess') tuples and conver them
+		# remember we take ('noun', 'princess') tuples and convert them
 		self.subject = subect[1]
 		self.verb = verb[1]
 		self.object = object[1]
