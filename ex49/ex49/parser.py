@@ -5,10 +5,9 @@ class Sentence(object):
 
 	def __init__(self, subject, verb, object):
 		# remember we take ('noun', 'princess') tuples and convert them
-		self.subject = subect[1]
+		self.subject = subject[1]
 		self.verb = verb[1]
 		self.object = object[1]
-
 
 def peek(word_list):
 	if word_list:
@@ -33,7 +32,7 @@ def skip(word_list, word_type):
 	while peek(word_list) == word_type:
 		match(word_list, word_type)
 
-def pars_verb(word_list):
+def parse_verb(word_list):
 	skip(word_list, 'stop')
 
 	if peek(word_list) == 'verb':
@@ -64,7 +63,7 @@ def parse_sentence(word_list):
 	start = peek(word_list)
 
 	if start == 'noun':
-		subj == match(word_list, 'noun')
+		subj = match(word_list, 'noun')
 		return parse_subject(word_list, subj)
 	elif start == 'verb':
 		# assume the subject is the player then
